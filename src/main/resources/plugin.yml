@@ -1,0 +1,8 @@
+name: ChatColorHandlerTest
+version: '${version}'
+main: me.dave.chatcolorhandlertest.ChatColorHandlerTest
+api-version: '1.20'
+commands:
+  chatcolorhandlertest:
+    description: ChatColorHandlerTest Command
+    usage: /chatcolorhandlertest
