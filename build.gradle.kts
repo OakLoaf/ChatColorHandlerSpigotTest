@@ -17,7 +17,7 @@ repositories {
 
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.20-R0.1-SNAPSHOT")
-    implementation("com.github.CoolDCB:ChatColorHandler:v2.2.1")
+    implementation("com.github.CoolDCB:ChatColorHandler:v2.4.1")
 }
 
 java {
