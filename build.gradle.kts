@@ -3,10 +3,6 @@ plugins {
     id("io.github.goooler.shadow") version("8.1.7")
 }
 
-java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
-}
-
 allprojects {
     apply(plugin="io.github.goooler.shadow")
 

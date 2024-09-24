@@ -4,12 +4,12 @@ plugins {
 
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.21-R0.1-SNAPSHOT")
-    implementation("org.lushplugins:ChatColorHandler:4.0.0-beta1")
+    implementation("org.lushplugins:ChatColorHandler:${findProperty("chatcolorhandlerVersion")}")
     implementation("org.jetbrains:annotations:24.0.0")
 }
 
 java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
 }
 
 tasks {
