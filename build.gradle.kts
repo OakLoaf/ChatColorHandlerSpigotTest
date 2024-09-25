@@ -9,6 +9,11 @@ allprojects {
     group = "org.lushplugins"
     version = "1.0.0"
 
+    ext {
+        set("minecraftVersion", "1.21")
+        set("chatcolorhandlerVersion", "4.0.0-alpha7")
+    }
+
     repositories {
         mavenCentral()
         mavenLocal()

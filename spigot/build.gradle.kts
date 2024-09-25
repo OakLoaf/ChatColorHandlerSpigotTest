@@ -3,8 +3,8 @@ plugins {
 }
 
 dependencies {
-    compileOnly("org.spigotmc:spigot-api:1.21-R0.1-SNAPSHOT")
-    implementation("org.lushplugins:ChatColorHandler:${findProperty("chatcolorhandlerVersion")}")
+    compileOnly("org.spigotmc:spigot-api:${rootProject.ext["minecraftVersion"]}-R0.1-SNAPSHOT")
+    implementation("org.lushplugins:ChatColorHandler:${rootProject.ext["chatcolorhandlerVersion"]}")
     implementation("org.jetbrains:annotations:24.0.0")
 }
 
@@ -16,7 +16,12 @@ tasks {
     shadowJar {
         relocate("org.lushplugins.chatcolorhandler.", "org.lushplugins.chatcolorhandlertest.libraries.chatcolor.")
 
-        archiveFileName.set("${project.name}-${project.version}.jar")
+        val folder = System.getenv("pluginFolder")
+        if (folder != null) {
+            destinationDirectory.set(file(folder))
+        }
+
+        archiveFileName.set("${rootProject.name}-${rootProject.version}.jar")
     }
 
     processResources {
