@@ -11,7 +11,7 @@ allprojects {
 
     ext {
         set("minecraftVersion", "1.21")
-        set("chatcolorhandlerVersion", "4.0.0-alpha7")
+        set("chatcolorhandlerVersion", "4.0.0")
     }
 
     repositories {
