@@ -39,6 +39,16 @@ public class MainCommand extends Command {
 
             audience.sendMessage(message);
             return true;
+        } else if (args.length >= 1 && args[0].equals("parse-legacy")) {
+            String message;
+            if (sender instanceof Player player) {
+                message = ChatColorHandler.translate(String.join(" ", Arrays.copyOfRange(args, 1, args.length)), player);
+            } else {
+                message = ChatColorHandler.translate(String.join(" ", Arrays.copyOfRange(args, 1, args.length)));
+            }
+
+            sender.sendMessage(message);
+            return true;
         }
 
         return true;
@@ -54,6 +64,7 @@ public class MainCommand extends Command {
             tabComplete.add("version");
             if (sender.hasPermission("chatcolorhandlertest.parse")) {
                 tabComplete.add("parse");
+                tabComplete.add("parse-legacy");
             }
         }
 
