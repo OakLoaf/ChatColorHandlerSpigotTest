@@ -49,6 +49,8 @@ public class MainCommand extends Command {
 
             sender.sendMessage(message);
             return true;
+        } else if (args.length >= 1 && args[0].equals("run-tests")) {
+            ChatColorHandlerTest.runTest(sender instanceof Player player ? player : null);
         }
 
         return true;
@@ -65,6 +67,7 @@ public class MainCommand extends Command {
             if (sender.hasPermission("chatcolorhandlertest.parse")) {
                 tabComplete.add("parse");
                 tabComplete.add("parse-legacy");
+                tabComplete.add("run-tests");
             }
         }
 
